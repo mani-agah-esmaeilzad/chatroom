@@ -24,6 +24,10 @@
             username:uname,
             text:message
         });
-        
+        socket.emit("chat",{
+            username:uname,
+            text:message
+        });
+        app.querySelector(".chat-screen #message-input").value = "";
     });
 })();
