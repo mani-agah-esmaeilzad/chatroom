@@ -58,6 +58,7 @@
             el.innerText = message;
             messageContainer.appendChild(el);
         }
+        messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
         
     }
 })();
