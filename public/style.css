@@ -46,3 +46,22 @@ body{
     padding: 5px 0px;
     display: inline-block;
 }
+.screen .form-input label{
+    display: block;
+    margin-bottom: 5px;
+}
+.screen .form-input input{
+    width: 100%;
+    padding:10px;
+    border: 1px solid #555;
+    font-size: 16px;
+}
+.screen .form-input button{
+    padding: 10px 20px;
+    background: #111;
+    color: #eee;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
