@@ -16,6 +16,14 @@
     });
     app.querySelector(".chat-screen #send-message").addEventListener("click",function(){
         let message = app.querySelector(".chat-screen #message-input").value;
+        if(message.length === 0)
+        {
+            return;
+        }
+        renderMessage("my",{
+            username:uname,
+            text:message
+        });
         
     });
 })();
