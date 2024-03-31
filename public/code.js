@@ -29,6 +29,11 @@
         app.querySelector(".chat-screen #message-input").value = "";
     });
 
+    app.querySelector(".chat-screen #exit-chat").addEventListener("click", function () {
+        socket.emit("exituser", uname);
+        window.location.href = window.location.href;
+    })
+
     function renderMessage(type, message) {
         let messageContainer = app.querySelector(".chat-screen .messages");
         if (type == "my") {
@@ -59,6 +64,6 @@
             messageContainer.appendChild(el);
         }
         messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
-        
+
     }
 })();
