@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
     <div class="app">
         <div class="screen join-screen acvtive">
-            <div class="form">
-                <h2>join chat room</h2>
-                <div class="form-input">
-                    <label for="">username</label>
-                    <input type="text" id="username">
-                </div>
-                <div class="form-input"></div>
+        <div class="form">
+            <h2>Join chat room</h2>
+            <div class="form-input">
+            <label for="">Username</label>
+            <input type="text" id="username" />
             </div>
-
+            <div class="form-input">
+            <button id="join-user">Join</button>
+            </div>
         </div>
-        <div class="screen chat-screen"></div>
+        </div>
+        <div class="screen chat-screen">
+        <div class="header">
+            <div class="logo">Chatroom</div>
+            <button id="exit-chat">Exit</button>
+        </div>
+        <div class="messages">
+            <!-- dummy message -->
+            <div class="message my-message">
+            <div class="name">you</div>
+            <div class="text">hi</div>
+            </div>
+            <div class="update">abc is joined the conversation</div>
+            <div class="message other-message">
+            <div class="name">abc</div>
+            <div class="text">hi</div>
+            </div>
+        </div>
+        <div class="type-box">
+            <input type="text" id="message-input">
+            <button id="send-message">Send</button>
+        </div>
+        </div>
     </div>
-    
+
     <script type="text/javascript" src="socket.io.js"></script>
     <script type="text/javascript" src="code.js"></script>
-</body>
+    </body>
 </html>
